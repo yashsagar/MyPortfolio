@@ -39,8 +39,8 @@ const Navbar = () => {
     }
   };
 
-  function active(isAction) {
-    return isAction ? " border-b-[2.5px] border-color-bg-accent pb-0.5 " : "";
+  function activeClass(isAction) {
+    return isAction ? " border-b-[2.5px] border-accent pb-0.5 " : "";
   }
 
   return (
@@ -50,26 +50,29 @@ const Navbar = () => {
           <span className="text-4xl font-bold tracking-tighter inline-block pb-3">
             Yash
           </span>
-          <span className="inline-block w-2 h-2 rounded-full bg-color-bg-accent ml-2"></span>
+          <span className="inline-block w-2 h-2 rounded-full bg-accent ml-2"></span>
         </NavLink>
       </div>
       <nav className="flex gap-x-4 font-semibold">
         <div>
-          <NavLink to={"/"} className={({ isActive }) => active(isActive)}>
+          <NavLink to={"/"} className={({ isActive }) => activeClass(isActive)}>
             Home
           </NavLink>
         </div>
         <div>
           <NavLink
             to={"/project"}
-            className={({ isActive }) => active(isActive)}
+            className={({ isActive }) => activeClass(isActive)}
           >
             Project
           </NavLink>
         </div>
         <div>
-          <NavLink to={"/about"} className={({ isActive }) => active(isActive)}>
-            About Us
+          <NavLink
+            to={"/about"}
+            className={({ isActive }) => activeClass(isActive)}
+          >
+            About Me
           </NavLink>
         </div>
       </nav>

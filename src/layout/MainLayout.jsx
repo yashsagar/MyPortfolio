@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../component/Navbar";
 const MainLayout = () => {
   return (
-    <div className="bg-color-bg text-color-text min-h-screen ">
+    <div className="bg-bg-primary text-primary min-h-screen ">
       <Navbar />
       <Outlet />
     </div>

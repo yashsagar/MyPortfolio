@@ -3,17 +3,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     darkMode: "selector",
+    fontFamily: { JetBrains: ['"JetBrains Mono"', "monospace"] },
     extend: {
       colors: {
-        "color-bg": {
-          DEFAULT: "rgb(var(--bg-default)/<alpha-value>)",
-          hover: "rgb(var(--bg-hover)/<alpha-value>)",
-          accent: "#00ff99",
-        },
-        "color-text": {
-          DEFAULT: "rgb(var(--text-default)/<alpha-value>)",
-          hover: "rgb(var(--text-hover)/<alpha-value>)",
-        },
+        primary: "rgb(var(--primary)/<alpha-value>)",
+        secondary: "rgb(var(--secondary)/<alpha-value>)",
+        accent: "rgb(var(--accent)/<alpha-value>)",
+        "accent-btn": "rgb(var(--accent-btn)/<alpha-value>)",
+        "bg-secondary": "rgb(var(--bg-secondary)/<alpha-value>)",
+        "bg-primary": "rgb(var(--bg-primary)/<alpha-value>)",
       },
     },
   },
