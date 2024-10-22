@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply text-black dark:text-white dark:bg-[#161513] bg-white;
+  }
+}
+
+.main-wrapper {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.svg {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(1%) saturate(0%)
+    hue-rotate(333deg) brightness(96%) contrast(101%);
+}
+
+.dark .svg {
+  filter: none;
+}
+
+.social-media:hover::before {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    75% 75% at 50% 50%,
+    #df89085b 30%,
+    #b515ff62 100%
+  );
+  animation: social-media 0.4s ease-in-out forwards;
+}
+
+.social-media:active {
+  background-image: radial-gradient(
+    75% 75% at 50% 50%,
+    #df890884 30%,
+    #b515ff81 100%
+  );
+}
+
+@keyframes social-media {
+  from {
+    width: 50%;
+    height: 50%;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.test {
+  border: 1px solid red;
+  /* color: #090909; */
+}

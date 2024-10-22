@@ -44,7 +44,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="main-wrapper py-2 flex justify-between items-center ">
+    <div className="main-wrapper pb-2 flex justify-between items-center absolute left-1/2 -translate-x-1/2 z-10 ">
       <div className="cursor-pointer">
         <NavLink to="/">
           <span className="text-4xl font-bold tracking-tighter inline-block pb-3">
